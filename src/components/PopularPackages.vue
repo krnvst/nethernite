@@ -1,9 +1,12 @@
 <template>
+  <div>
+    <p>Cамые популярные пакеты:</p>
     <ul>
         <li v-for="packages in packagesList" :key="packages.hits">
             {{ packages.name }}
         </li>
     </ul>
+  </div>
 </template>
 
 <script>
@@ -27,9 +30,6 @@ export default {
         .catch((err) => {
           console.log("Ошибка получения данных " + err)
         })
-    },
-    loadFrame() {
-      this.isLoadedIframe = true
     }
   }
 }

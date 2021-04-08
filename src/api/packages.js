@@ -12,11 +12,11 @@ async function getPopularPackages(limit = 10) {
 	});
 }
 
-async function getPackageByName(name) {
+async function getPackageInfoByName(name) {
 	return request({
 		url: `${endpoints.package}/${name}`,
 		method: 'get',
 	});
 }
 
-export { getPopularPackages, getPackageByName }
+export { getPopularPackages, getPackageInfoByName }
